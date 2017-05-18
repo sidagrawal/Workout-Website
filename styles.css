@@ -1,0 +1,22 @@
+/* Adjust background image for landing page display */
+.landing   {
+    /*background-image: url("http://cdn.pcwallart.com/images/vancouver-wallpaper-1.jpg"); */
+    max-width: 100%;
+    height: auto;
+    width: auto\9;
+}
+
+/* Add color background to the landing page top bar */
+.topbar {
+
+}
+
+/* Style logo on topbar */
+.golds {
+
+}
+
+/* Styling for logo displayed on top navbar */
+.topbar a {
+
+}
