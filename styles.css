@@ -1,22 +1,13 @@
 /* Adjust background image for landing page display */
 .landing   {
-    /*background-image: url("http://cdn.pcwallart.com/images/vancouver-wallpaper-1.jpg"); */
-    max-width: 100%;
-    height: auto;
-    width: auto\9;
-}
-
-/* Add color background to the landing page top bar */
-.topbar {
-
-}
-
-/* Style logo on topbar */
-.golds {
-
-}
-
-/* Styling for logo displayed on top navbar */
-.topbar a {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 1000;
+    background-image: url("http://cdn.pcwallart.com/images/vancouver-wallpaper-1.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
 
 }
