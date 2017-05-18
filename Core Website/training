@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Training</title>
+  <meta charset="UTF-8">    <!-- Character encoding for Unicode -->
+  <meta name="description" content="Fitness Website">   <!-- Provides information for XML and web parsers on nature of site -->
+  <meta name="keywords" content="Workout, Fitness, Gym, Gainz, Strength, Size, Lift">    <!-- Provides keywords and tags for search engines -->
+  <meta name="author" content="Keegan, Tunir">    <!-- Information regarding authors of website -->
+  <meta http-equiv="refresh" content="60">    <!-- Directs browser to refresh page every 60 seconds -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">    <!-- Sets the width of the page to follow the screen-width of users' device -->
+  <link rel="stylesheet" href="styles.css"> <!-- Retrieving the data from the Style.css file to keep all styling in one page -->
+</head>
+</html>
