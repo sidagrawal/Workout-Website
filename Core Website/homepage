@@ -9,82 +9,87 @@
   <meta http-equiv="refresh" content="60">    <!-- Directs browser to refresh page every 60 seconds -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">    <!-- Sets the width of the page to follow the screen-width of users' device -->
   <link rel="stylesheet" href="styles.css"> <!-- Retrieving the data from the Style.css file to keep all styling in one page -->
+</head>
 
 <style>
-  .sidenav {
-      height: 100%;
-      width: 0;
-      position: fixed;
-      z-index: 1;
-      top: 0;
-      right: 0;
-      background-color: #111;
-      overflow-x: hidden;
-      transition: .5s;
-      padding-top: 60px;
-  }
+/* Side Navigation Bar Used Across All Pages except Landing Page */
+.navBar {
+  height: 100%; /* utilizing the entire height of the browser */
+  width: 0;
+  position: fixed; /* Prevent the navBar from moving */
+  z-index: 1; /* fix the navBar to the top of the page at all times */
+  top: 0;
+  right: 0;
+  background-color: #111; /* TODO: Confirm the Navigation Bar Color */
+  overflow-x: hidden; /* Prevent the user from being able to scroll*/
+  padding-top: 30px; /* TODO: Confirm the Padding at the top of the Navigation bar */
+  transition: 0.5s; /* the speed at which the navBar will appear once the user clicks on the icon */
+}
 
-  .sidenav a {
-      padding: 8px 8px 8px 32px;
-      text-decoration: none;
-      font-size: 25px;
-      color: #818181;
-      display: block;
-      transition: .5s;
-  }
+/* Format the color for each element within the navBar */
+.navBar a {
+  padding: 8px 8px 8px 32px; /* TODO: double check the padding on each page */
+  text-decoration: none; /* Preventing any decorration of each hyperlink element to a different page */
+  font-size: 25px; /* TODO: confirm the size for each element in the navBar */
+  color: #FFFFFF; /* TODO: confirm the color of the text along with the navBar */
+  display: block;
+  transition: 0.3s; /* TODO: confirm the speed and transition*/
+}
 
-  .sidenav a:hover, .offcanvas a:focus{
-      color: #2f2f2f;
-  }
+/* When a user hovers over an element in a navBar, change the color */
+.navBar a:hover, .offViewPort a:focus{
+  color: #2F2F2F; /* TODO: confirm the color */
+}
 
-  .sidenav .closebtn {
-      position: absolute;
-      top: 0;
-      right: 25px;
-      font-size: 36px;
-      margin-left: 50px;
-  }
 
-  #main {
-      transition: margin-left .5s;
-      padding: 16px;
-  }
+/* Push the elements to the left when opening the navBar */
+#main {
+  transition: margin-right .5s;
+  padding: 20px;
+}
 
-  @media screen and (max-height: 450px) {
-    .sidenav {padding-top: 15px;}
-    .sidenav a {font-size: 18px;}
-  }
-  </style>
-  </head>
-  <body>
+/* Responsive navBar to change the size based on the browser size*/
+@media screen and (max-height: 450px) {
+    .navBar {
+      padding-top: 15px;
+    }
+    .navBar a {
+      font-size: 18px;
+    }
+}
+</style>
+<body>
+<!-- Setting up the basic HTML to navigate to different parts of the application -->
+<div class="navBar" id="navBar">
+  <a href="javascript:void(0)" onclick="closeNavBar()"></a>
+  <a href="homepage">Home</a>
+  <a href="training">Training</a>
+  <a href="nutrition">Nutrition</a>
+  <a href="store">Store</a>
+  <a href="ourStory">Our Story</a>
+</div>
 
-  <div id="mySidenav" class="sidenav">
-    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-    <a href="homepage">Home</a>
-    <a href="training">Training</a>
-    <a href="nutrition">Nutrition</a>
-    <a href="community">Community</a>
-    <a href="store">Store</a>
-    <a href="ourStory">Our Story</a>
-  </div>
+<!-- Using an element to cause the Navigation Bar to open upon clicking on the Main Menu icon -->
+<span onclick="openNavBar()"></span>
 
-  <div id="main">
-    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
-  </div>
+<!-- TODO: insert all the main content under this div to have the page responsive -->
+<div id="main">
+  <span style="font-size:30px;cursor:pointer;position:right;" onclick="openNavBar()">&#9776;</span>
+  <h> CONTENT TEST PUSH</h>
+  <div>
 
-  <script>
-  function openNav() {
-      document.getElementById("mySidenav").style.width = "250px";
-      document.getElementById("main").style.marginLeft = "250px";
-      document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
-  }
+<script>
+function openNavBar (){
+  document.getElementById('navBar').style.width = "250px";
+  document.getElementById('navBar').style.marginLeft = "250px";
+  document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+}
 
-  function closeNav() {
-      document.getElementById("mySidenav").style.width = "0";
-      document.getElementById("main").style.marginLeft= "0";
-      document.body.style.backgroundColor = "white";
-  }
-  </script>
+function closeNavBar (){
+  document.getElementById('navBar').style.width = "0px";
+  document.getElementById('navBar').style.marginLeft= "0px";
+  document.body.style.backgroundColor = "white";
+}
+</script>
 
-  </body>
-  </html>
+</html>
