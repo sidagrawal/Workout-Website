@@ -11,6 +11,7 @@
     background-size: 100% 100%;
 
 }
+
 .wrapper    {
     display: block;
     text-align: center;
@@ -41,4 +42,51 @@
     background-color: #3e8e41;
     box-shadow: 0 0px #666;
     transform: translateY(1px);
+}
+
+/* Side Navigation Bar Used Across All Pages except Landing Page */
+.navBar {
+  height: 100%; /* utilizing the entire height of the browser */
+  width: 0;
+  position: fixed; /* Prevent the navBar from moving */
+  z-index: 1; /* fix the navBar to the top of the page at all times */
+  top: 0;
+  left: 0;
+  background-color: #000000; /* TODO: Confirm the Navigation Bar Color */
+  overflow-x: hidden; /* Prevent the user from being able to scroll*/
+  padding-top: 30px; /* TODO: Confirm the Padding at the top of the Navigation bar */
+  transition: 0.5s; /* the speed at which the navBar will appear once the user clicks on the icon */
+}
+
+/* Format the color for each element within the navBar */
+.navBar a {
+  padding: 8px 8px 8px 32px; /* TODO: double check the padding on each page */
+  text-decoration: none; /* Preventing any decorration of each hyperlink element to a different page */
+  font-size: 25px; /* TODO: confirm the size for each element in the navBar */
+  color: #FFFFFF; /* TODO: confirm the color of the text along with the navBar */
+  display: block;
+  transition: 0.3s; /* TODO: confirm the speed and transition*/
+  text-align: center;
+}
+
+/* When a user hovers over an element in a navBar, change the color */
+.navBar a:hover, .offViewPort a:focus{
+  color: #2F2F2F; /* TODO: confirm the color */
+}
+
+
+/* Push the elements to the left when opening the navBar */
+#main {
+  transition: margin-right .5s;
+  padding: 20px;
+}
+
+/* Responsive navBar to change the size based on the browser size*/
+@media screen and (max-height: 450px) {
+    .navBar {
+      padding-top: 15px;
+    }
+    .navBar a {
+      font-size: 18px;
+    }
 }
