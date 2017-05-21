@@ -12,11 +12,26 @@
 
 }
 
-.wrapper    {
+/* Stylistic elements for welcome quote */
+.wrapper h2    {
     display: block;
     text-align: center;
     position: fixed;
-    left: 50%;
+    left: 45%;
+    top: 60%;
+    color: white;
+    background-color: #2F2F2F;
+    border: solid black;
+    padding: 5px;
+    margin: auto;
+}
+
+/* Stylistic elements for button to redirect to homepage */
+.wrapper form    {
+    display: block;
+    text-align: center;
+    position: fixed;
+    left: 46%;
     top: 70%;
 }
 
