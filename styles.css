@@ -9,21 +9,28 @@
     background-image: url("http://cdn.pcwallart.com/images/vancouver-wallpaper-1.jpg");
     background-repeat: no-repeat;
     background-size: 100% 100%;
-
 }
 
-/* Stylistic elements for welcome quote */
-.wrapper h2    {
+.wrapper    {
+    position: relative;
+}
+
+/* Stlying welcome quote element within wrapper div */
+.wrapper h2 {
     display: block;
     text-align: center;
     position: fixed;
-    left: 45%;
-    top: 60%;
     color: white;
     background-color: #2F2F2F;
     border: solid black;
-    padding: 5px;
-    margin: auto;
+    padding: 10px;
+    width: 30em;
+    margin-left: 30%;
+    margin-right: 50%;
+    top: 30%;
+    background-size: 100%;
+    font-style: italic;
+    font-family: Times;
 }
 
 /* Stylistic elements for button to redirect to homepage */
@@ -31,8 +38,8 @@
     display: block;
     text-align: center;
     position: fixed;
-    left: 46%;
-    top: 70%;
+    margin-left: 45%;
+    top: 50%;
 }
 
 .button     {
